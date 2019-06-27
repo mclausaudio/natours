@@ -33,4 +33,44 @@ body {
 	background-size: cover;
 	background-position: top;
 	clip-path: polygon(0 0, 100% 0, 100% 70vh, 0 100%);
+	position: relative;
+}
+
+.logo-box {
+	position: absolute;
+	top: 40px;
+	left: 40px;
+}
+
+.logo {
+	height: 40px;
+}
+
+.text-box {
+	position: absolute;
+	/* set the top left corner in the middle of the screen with top: 50% left:50% (or whatever top % depending on where you want it on the x axis) */
+	/* top: 50%; */
+	top: 40%;
+	left: 50%;
+	/* then shift it 50% of the elements width to the left, and up */
+	transform: translate(-50%, -50%);
+}
+
+.heading-primary {
+	color: #ffffff;
+	text-transform: uppercase;
+}
+
+.heading-primary-main {
+	display: block;
+	font-size: 60px;
+	letter-spacing: 35px;
+	font-weight: 400;
+}
+
+.heading-primary-sub {
+	display: block;
+	font-size: 20px;
+	letter-spacing: 17.4px;
+	font-weight: 700;
 }
