@@ -11,11 +11,11 @@ body {
 	text-transform: uppercase;
 	/* if animation has a 'shake' once its done, use code below */
 	/* backface-visibility: hidden; */
-	margin-bottom: 60px;
+	margin-bottom: 6rem;
 	&--main {
 		display: block;
-		font-size: 60px;
-		letter-spacing: 35px;
+		font-size: 6rem;
+		letter-spacing: 3.5rem;
 		font-weight: 400;
 		animation-name: moveInLeft;
 		animation-duration: 1s;
@@ -25,8 +25,8 @@ body {
 	}
 	&--sub {
 		display: block;
-		font-size: 20px;
-		letter-spacing: 17.4px;
+		font-size: 2rem;
+		letter-spacing: 1.75rem;
 		font-weight: 700;
 		animation: moveInRight 1s ease-out;
 		/* animation-name: moveInRight;

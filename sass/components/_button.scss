@@ -4,11 +4,12 @@
 	&:visited {
 		text-transform: uppercase;
 		text-decoration: none;
-		padding: 15px 40px;
+		padding: 1.5rem 4rem;
 		display: inline-block;
-		border-radius: 100px;
+		border-radius: 10rem;
 		transition: all 0.2s;
 		position: relative;
+		font-size: $default-font-size;
 	}
 	&::after {
 		content: "";
@@ -25,7 +26,7 @@
 	&:hover {
 		transform: translateY(-3px);
 		/* x axis, y axis, amount of blur, color */
-		box-shadow: 0 10px 20px rgba($color-black, 0.2);
+		box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
 		&::after {
 			transform: scaleX(1.4) scaleY(1.6);
 			opacity: 0;
@@ -35,7 +36,7 @@
 	&:active {
 		transform: translateY(-1px);
 		/* on click remove some shadow so it looks like its being depressed */
-		box-shadow: 0 5px 10px rgba($color-black, 0.2);
+		box-shadow: 0 0.5px 1rem rgba($color-black, 0.2);
 	}
 
 	&--white {
