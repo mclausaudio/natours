@@ -12,7 +12,6 @@
 	// ^= means starts with, *= means includes, we use starts with because includes could lead to confusion down the road
 	[class^="col-"] {
 		float: left;
-		background-color: green;
 		&:not(:last-child) {
 			margin-right: $gutter-horizontal;
 		}

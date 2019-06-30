@@ -1,0 +1,6 @@
+.section-about {
+	background-color: $color-grey-light-1;
+	padding: 25rem 0;
+	// header height is 95vh, clip path for angle is 75vh. so we do 95 - 75 to determine how much to pull of section
+	margin-top: -20vh;
+}
