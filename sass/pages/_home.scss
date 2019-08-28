@@ -4,3 +4,28 @@
 	// header height is 95vh, clip path for angle is 75vh. so we do 95 - 75 to determine how much to pull of section
 	margin-top: -20vh;
 }
+
+.section-features {
+	padding: 20rem 0;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba($color-primary-light, 0.8),
+			rgba($color-primary-dark, 0.8)
+		),
+		url("../img/nat-4.jpg");
+	background-size: cover;
+	//can skew entire section
+	transform: skewY(-7deg);
+	//use negative margin to pull up the section, so cover any white space caused by the skew
+	margin-top: -10rem;
+	//select all DIRECT children of section-features, so basically just the row, but do it this way incase we add more
+	& > * {
+		transform: skewY(7deg);
+	}
+}
+
+.section-tours {
+	background-color: $color-grey-light-1;
+	padding: 25rem 0 15rem 0;
+	margin-top: -10rem;
+}
