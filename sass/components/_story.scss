@@ -1,0 +1,31 @@
+.story {
+	width: 75%;
+	margin: 0 auto;
+	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
+	background-color: $color-white;
+	border-radius: 3px;
+	padding: 6rem;
+	padding-left: 9rem; //6rem + the -3rem offset on the shape transform for the padding
+	font-size: $default-font-size;
+	transform: skewX(-12deg);
+
+	// offset everything inside the skew
+	& > * {
+		//be careful though, can't apply multiple transforms to elements, one will take precedence
+		transform: skewX(12deg);
+	}
+
+	&__shape {
+		width: 15rem;
+		height: 15rem;
+		float: left;
+		// Shape defines how the content flow around the component.
+		-webkit-shape-outside: circle(50% at 50% 50%);
+		shape-outside: circle(50% at 50% 50%);
+		clip-path: circle(50% at 50% 50%);
+		transform: translateX(-3rem) skewX(12deg);
+	}
+	&__img {
+		height: 100%;
+	}
+}
