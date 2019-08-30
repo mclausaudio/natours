@@ -2,7 +2,7 @@
 	width: 75%;
 	margin: 0 auto;
 	box-shadow: 0 3rem 6rem rgba($color-black, 0.1);
-	background-color: $color-white;
+	background-color: rgba($color-white, 0.6);
 	border-radius: 3px;
 	padding: 6rem;
 	padding-left: 9rem; //6rem + the -3rem offset on the shape transform for the padding
@@ -19,13 +19,44 @@
 		width: 15rem;
 		height: 15rem;
 		float: left;
+		position: relative;
 		// Shape defines how the content flow around the component.
 		-webkit-shape-outside: circle(50% at 50% 50%);
 		shape-outside: circle(50% at 50% 50%);
 		clip-path: circle(50% at 50% 50%);
 		transform: translateX(-3rem) skewX(12deg);
+		overflow: hidden;
 	}
 	&__img {
 		height: 100%;
+		//add translate X to center image a bit, add scale so that when we hover we can take it back to 1, making it look like its zooming out
+		transform: translateX(-4rem) scale(1.4);
+		transition: all 0.5s;
+		backface-visibility: hidden;
+	}
+	&__caption {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		//setting y to 0, because will change this on hover
+		transform: translate(-50%, 0);
+		color: $color-white;
+		text-transform: uppercase;
+		font-size: 1.7rem;
+		text-align: center;
+		//initial state before animation
+		opacity: 0;
+		transition: all 0.5s;
+		// backface-visibility hidden fixes that slight 1 px movement after animation transition finishes
+		backface-visibility: hidden;
+	}
+	//when story if hovered, target caption
+	&:hover &__caption {
+		opacity: 1;
+		transform: translate(-50%, -50%);
+	}
+	&:hover &__img {
+		transform: translateX(-4rem) scale(1);
+		filter: blur(3px) brightness(80%);
 	}
 }

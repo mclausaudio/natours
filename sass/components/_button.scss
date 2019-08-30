@@ -1,5 +1,6 @@
 /* using link pseudo class :link is before clik, visited after, and we want them the same */
 .btn {
+	&,
 	&:link,
 	&:visited {
 		text-transform: uppercase;
@@ -10,6 +11,10 @@
 		transition: all 0.2s;
 		position: relative;
 		font-size: $default-font-size;
+
+		// change for the <button> elements
+		border: none;
+		cursor: pointer;
 	}
 	&::after {
 		content: "";
@@ -33,7 +38,9 @@
 		}
 	}
 	/* active is when clicked */
-	&:active {
+	&:active,
+	&focus {
+		outline: none;
 		transform: translateY(-1px);
 		/* on click remove some shadow so it looks like its being depressed */
 		box-shadow: 0 0.5px 1rem rgba($color-black, 0.2);
