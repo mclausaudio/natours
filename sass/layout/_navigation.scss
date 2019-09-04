@@ -42,10 +42,7 @@
 		transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 	}
 	&__list {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		@include absCenter;
 		list-style: none;
 		text-align: center;
 		width: 100%;
