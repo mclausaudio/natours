@@ -12,7 +12,23 @@ html {
 	// bad practice to set root font-size as px, it'll mess with browser defaults
 	// divide 10 by 16 (the typical default) = 62.5%
 	// this defines what 1rem is
-	font-size: 62.5%;
+	font-size: 62.5%; // 1rem = 10px; 10px/16px = 62.5%
+
+	//no need for a phone media query because 50% will be smalled font-size
+
+	@include respond(tab-land) {
+		// is width < 1200?
+		font-size: 56.25%; //1 rem = 9px, 8/16 = 62.50%;
+	}
+
+	@include respond(tab-port) {
+		// is width less than 900?
+		font-size: 50%; //1 rem = 8pxm 8/16 = 50%;
+	}
+
+	@include respond(big-desktop) {
+		font-size: 75%; //1 rem = 12px, 12/16 = 75%;
+	}
 }
 
 body {
