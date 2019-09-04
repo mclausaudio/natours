@@ -28,6 +28,8 @@ $breakpoint argument choices:
 - big-desktop
 */
 
+// Order for responsiveness: Base + Typography > General Layout + Grid > Page Layout > components
+
 //ems are the best option for media query.. 1em = 16px, unlike rem which is whatever the base font size is.
 @mixin respond($breakpoint) {
 	@if $breakpoint == phone {
