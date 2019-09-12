@@ -173,7 +173,7 @@
 		font-weight: 100;
 	}
 	//COMPLETE REWRITE FOR SMALLER DEVICES
-	@include respond(tab-port) {
+	@media (max-width: 56.25em), (hover: none) {
 		height: auto;
 		border-radius: 3px;
 		background-color: $color-white;
