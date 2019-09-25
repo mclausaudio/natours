@@ -22,6 +22,44 @@ Natours is a fully responsve landing page and marketing website built for a fict
 
 To create the navigation, I utilized a CSS technique known as the checkbox hack. This involves hiding a input tag and styling it's associated label tag to look like a button. Clicking the label will toggle the inputs 'checked' state. I then used the :checked CSS pseudo element to target a background div that is underneath the label ONLY when the input tag has a state of checked. When checked, the background div is scaled to spread across the page and a list of links is centered. I also rotate the hamburger icon that I created to make an X.
 
+HTML
+
+```
+<div class="navigation">
+			<!-- Checkbox Hack -->
+			<input
+				type="checkbox"
+				class="navigation__checkbox"
+				id="navi-toggle"
+			/>
+			<label for="navi-toggle" class="navigation__button">
+				<span class="navigation__icon">&nbsp;</span>
+			</label>
+			<div class="navigation__background">&nbsp;</div>
+			<nav class="navigation__nav">
+				<ul class="navigation__list">
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">About Natours</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Your Benefits</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Popular Tours</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Stories</a>
+					</li>
+					<li class="navigation__item">
+						<a href="#" class="navigation__link">Book Now</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+```
+
+CSS
+
 ```
 .navigation {
 	&__checkbox {
