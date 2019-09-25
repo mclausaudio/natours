@@ -6,7 +6,7 @@
 	height: 100vh;
 	background-color: rgba($color-black, 0.8);
 	z-index: 9999;
-	//Remember, setting opacity to 0, content is still there just invisible, so you can't click anything under it.  So we set visibility to hidden.  Can don't use Display none becasue we can't animate display
+	//Remember, setting opacity to 0, content is still there just invisible, so you can't click anything under it.  So we set visibility to hidden.  Don't use Display none becasue we can't animate display
 	opacity: 0;
 	visibility: hidden;
 

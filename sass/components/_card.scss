@@ -65,7 +65,7 @@
 		background-blend-mode: screen;
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 		clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-		//clip-path messes with overflow: hidden, so we need to reset border radip manually
+		//clip-path messes with overflow: hidden, so we need to reset border radius manually
 		border-top-left-radius: 3px;
 		border-top-right-radius: 3px;
 		&--1 {
