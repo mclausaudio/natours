@@ -6,6 +6,8 @@
 
 ---
 
+https://mc-nature-tours.netlify.app
+
 Natours is a fully responsve landing page and marketing website built for a fictional company. My main goal for this project was to 'level up' my CSS and styling skills. To accomplish this, I decided to learn Sass and focus on a few key areas that include asymmetrical page layouts, utilizing transform effects to create engaging user interactions and keeping the code as 'DRY' as possible by creating reusable components. Below is a list of some of the technologies, features, and techniques I implemented in this project.
 
 -   Sass & Semantic HTML
